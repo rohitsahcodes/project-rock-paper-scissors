@@ -15,8 +15,7 @@ function getComputerChoice() {
     // console.log("computerChoice value : ", computerChoice);
     return computerChoice;
 }
-getComputerChoice();
-console.log("computerChoise : ",computerChoice);
+
 
 
 
@@ -28,18 +27,21 @@ function getHumanChoice() {
     humanChoice = prompt("Enter rock, paper, or scissors:");
     humanChoice = humanChoice.toLowerCase();
     // console.log(userChoice);
+    // if (humanChoice === null){
+    //     console.log("Did you just cancelled? I got it! you don't want to play with me? Okay fine..");
+    // }
     if (
         humanChoice !== "rock" &&
         humanChoice !== "paper" &&
         humanChoice !== "scissors"
     ) {
         console.log("Invalid input");
-        return getHumanChoice();
+        getHumanChoice();
     }
+    return humanChoice;
     // console.log("humanChoice: ", humanChoice);
 }
-getHumanChoice();
-console.log("humanChoice :", humanChoice);
+
 
 
 
@@ -94,20 +96,61 @@ function getWinLost() {
         console.log("It's is tie, babay");
     }
 }
+
+
+
+getComputerChoice();
+console.log("computerChoise : ", computerChoice);
+
+getHumanChoice();
+console.log("humanChoice :", humanChoice);
+
+
 getWinLost();
 
 console.log("HumanScore: ", humanScore);
 console.log("ComputerScore: ", computerScore);
 
-console.log("first round completed now next round i guess");
+console.log("first round completed now next round");
 
 
 
 
+// let i = 1;
+// while (humanScore < 5 && computerScore < 5) {
+//     getComputerChoice();
+//     getHumanChoice();
+//     getWinLost();
 
-// while (humanScore <= 5 || computerScore <= 5){
+//     console.log("HumanScore: ", humanScore);
+//     console.log("ComputerScore: ", computerScore);
+
+//     console.log(i," round completed now next round");
+//     i++;
+// }
+
+
+// function playRound(humanChoice, computerChoice){
 
 // }
+
+// const humanSelection = getHumanChoice();
+// const computerSelection = getComputerChoice();
+// console.log("Human choosed: ", humanSelection);
+// console.log("Human choosed: ", computerSelection);
+
+// playRound(humanSelection, computerSelection);
+
+
+
+
+
+
+
+
+
+
+
 
 
 
