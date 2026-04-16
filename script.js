@@ -1,9 +1,7 @@
-// to get computer random choice 
+// to get computer choice with the help of random number generator and store in computerChoice
 let computerChoice = "";
 function getComputerChoice() {
     let = randomNumber = Math.floor(Math.random() * 3) + 1;
-    // console.log("randomNumber : ", randomNumber);
-    // console.log("type of randomNumber : ", typeof (randomNumber));
     if (randomNumber === 1) {
         computerChoice = "rock";
     } else if (randomNumber === 2) {
@@ -11,17 +9,12 @@ function getComputerChoice() {
     } else {
         computerChoice = "scissors";
     }
-    // console.log("randomNumber value : ", randomNumber);
-    // console.log("computerChoice value : ", computerChoice);
     return computerChoice;
 }
 
 
 
-
-
-// console.log("below values if for human input");
-// To get input form human/user
+// To get input form human/user and store in humanChoice variable
 let humanChoice = "";
 function getHumanChoice() {
     humanChoice = prompt("Enter rock, paper, or scissors:");
@@ -39,34 +32,17 @@ function getHumanChoice() {
         getHumanChoice();
     }
     return humanChoice;
-    // console.log("humanChoice: ", humanChoice);
 }
 
 
 
-
-
-
-
-// // I forgot why i wrote this function..
-// function getWinLost(computerChoice, HumanChoice) {
-//     if (computerChoice === "rock" && HumanChoice === "paper") {
-//         console.log("You won!");
-//     } else if (computerChoice === "rock" && HumanChoice === "scissors") {
-//         console.log("You lost!");
-//     } else if (computerChoice === "rock" && HumanChoice === "paper") {
-//         console.log("You won!");
-//     }
-// }
-
-console.log("result below line")
-
-// taking two input and checkin first whic case satisfy and then resulting accordingly
+// taking computer and human choice and checkin first which case satisfy and then resulting the winner accordingly
 let humanScore = 0;
 let computerScore = 0;
-function getWinLost() {
-    let hum = humanChoice;
-    let com = computerChoice;
+
+function getWinLost(hum, com) {
+    // let hum = humanChoice;
+    // let com = computerChoice;
     if ((hum === "rock" || com === "rock") && (hum === "paper" || com === "paper")) {
         if (hum === "rock") {
             console.log("You lost!");
@@ -99,65 +75,38 @@ function getWinLost() {
 
 
 
-getComputerChoice();
-console.log("computerChoise : ", computerChoice);
-
-getHumanChoice();
-console.log("humanChoice :", humanChoice);
-
-
-getWinLost();
-
-console.log("HumanScore: ", humanScore);
-console.log("ComputerScore: ", computerScore);
-
-console.log("first round completed now next round");
-
-
-
-
-// let i = 1;
-// while (humanScore < 5 && computerScore < 5) {
-//     getComputerChoice();
-//     getHumanChoice();
-//     getWinLost();
-
-//     console.log("HumanScore: ", humanScore);
-//     console.log("ComputerScore: ", computerScore);
-
-//     console.log(i," round completed now next round");
-//     i++;
-// }
-
-
-// function playRound(humanChoice, computerChoice){
-
-// }
-
-// const humanSelection = getHumanChoice();
-// const computerSelection = getComputerChoice();
-// console.log("Human choosed: ", humanSelection);
-// console.log("Human choosed: ", computerSelection);
-
-// playRound(humanSelection, computerSelection);
 
 
 
 
 
+for ( let i = 1; i <= 5; i++) {
+
+    
+    getComputerChoice();
+    console.log("computer choice : ", getComputerChoice());
+
+    let temp = getHumanChoice();
+    console.log("human choice : ", temp);
+    getWinLost(humanChoice, computerChoice);
+
+    console.log("HumanScore: ", humanScore);
+    console.log("ComputerScore: ", computerScore);
+
+    console.log(i," round completed");
+
+}
+
+if (humanScore > computerScore){
+    prompt("You deafeated computer!");
+    console.log("You won this game after 5 round");
+} else {
+    prompt("computer deafeated you! better luck next time");
+    console.log("Computer won this time, after 5 round");
+
+}
 
 
 
 
-
-
-
-
-
-
-// if (humanScore === 5 && computerScore < 5) {
-//     console.log("This time you won the game");
-// } else if (computerScore === 5 && humanScore < 5) {
-//     console.log("This time computer won the game");
-// }
 
