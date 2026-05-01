@@ -1,3 +1,110 @@
+body{
+    background-color: aquamarine;
+    margin: 0px;
+}
+.header {
+    /* border: 2px solid red; */
+    margin-top: 35px;
+    font-weight: 900;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.heading{
+    margin: 0vh 0.2em;
+}
+
+.buttons{
+    margin-top: 30px;
+    border: 2px solid green;
+    padding: 1vh;
+
+/* 
+    height: 250px;
+    width: 400px; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+.btn{
+    padding: 13px 23px;
+    margin: 3vw 3vw;
+    text-align: center;
+    border-radius: 10%;
+    background-color: rgb(141, 200, 181);
+
+    border: 0px;
+    
+}
+
+#mym{
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 200%;
+    border: 2px dotted yellow;
+    /* margin: 0px; */
+    text-align: center;
+}
+
+
+#scores{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    padding: 20px;
+    border: 2px solid pink;
+    font-size: 20px;
+    font-weight: 500;
+    gap: 20px;
+}
+#score{
+    border: 2px dashed gray;
+    display: flex;
+}
+
+#comScrBtn,
+#humScrBtn{
+    padding: 1px;
+
+    height: 25px;
+    width: 25px;
+    
+    border: 2px solid red;
+}
+
+#infoAboutGame{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

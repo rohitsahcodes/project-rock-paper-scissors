@@ -1,13 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project: Rock Paper Scissors</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h2 class="heading">Rock</h2>
+      <h2 class="heading">Paper</h2>
+      <h2 class="heading">Scissors</h2>
+    </div>
+    <div class="buttons">
+      <button class="btn rock">🗿 Rock</button>
+      <button class="btn paper">📄 Paper</button>
+      <button class="btn scissors">✂️ Scissors</button>
+    </div>
+    <h2 id="mym">Make your move!</h2>
+    <div id="scores">
+      <span id="score">Computer score: <button id="comScrBtn"></button></span>
+
+      <span id="score">Human Score: <button id="humScrBtn"></button></span>
+    </div>
+    <div id="infoAboutGame">Those who score 3 first gonna win.. Have Fun!</div>
+
     <script src="script.js" defer></script>
-</body>
+  </body>
 </html>

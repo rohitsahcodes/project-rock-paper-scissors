@@ -12,33 +12,57 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-
+getComputerChoice();
 
 // To get input form human/user and store in humanChoice variable
+
+
 let humanChoice = "";
-function getHumanChoice() {
-    humanChoice = prompt("Enter rock, paper, or scissors:");
-    humanChoice = humanChoice.toLowerCase();
-    // console.log(userChoice);
-    // if (humanChoice === null){
-    //     console.log("Did you just cancelled? I got it! you don't want to play with me? Okay fine..");
-    // }
-    if (
-        humanChoice !== "rock" &&
-        humanChoice !== "paper" &&
-        humanChoice !== "scissors"
-    ) {
-        console.log("Invalid input");
-        getHumanChoice();
-    }
-    return humanChoice;
-}
+
+//upper prompt replacement codes below..
+const rockChoosen = document.querySelector(".btn.rock");
+const paperChoosen = document.querySelector(".btn.paper");
+const scissorsChoosen = document.querySelector(".btn.scissors");
+
+const comScrBtn = document.querySelector("#comScrBtn");
+const humScrBtn = document.querySelector("#humScrBtn");
+
+//receiving usier chice using click listener.. 
+rockChoosen.addEventListener("click", () => {
+    humanChoice = "rock";
+    getWinLost(humanChoice, getComputerChoice());
+    console.log("Human Score: ",humanScore);
+    console.log("Computer Score: ", computerScore);
+    comScrBtn.textContent = computerScore;
+    humScrBtn.textContent = humanScore;
+
+});
+
+
+
+
+
+paperChoosen.addEventListener("click", () => {
+    humanChoice = "paper";
+    // console.log(humanChoice);
+    getWinLost(humanChoice, getComputerChoice());
+});
+scissorsChoosen.addEventListener("click", () => {
+    humanChoice = "scissors";
+    // console.log(humanChoice);
+    getWinLost(humanChoice, getComputerChoice());
+});
+
+let humanScore = 0;
+let computerScore = 0;
+console.log(humanScore);
+console.log(computerScore);
+
 
 
 
 // taking computer and human choice and checkin first which case satisfy and then resulting the winner accordingly
-let humanScore = 0;
-let computerScore = 0;
+
 
 function getWinLost(hum, com) {
     // let hum = humanChoice;
@@ -74,15 +98,15 @@ function getWinLost(hum, com) {
 }
 
 
+getWinLost(humanChoice, getComputerChoice());
+
+/*
 
 
 
+for (let i = 1; i <= 5; i++) {
 
 
-
-for ( let i = 1; i <= 5; i++) {
-
-    
     getComputerChoice();
     console.log("computer choice : ", getComputerChoice());
 
@@ -93,11 +117,11 @@ for ( let i = 1; i <= 5; i++) {
     console.log("HumanScore: ", humanScore);
     console.log("ComputerScore: ", computerScore);
 
-    console.log(i," round completed");
+    console.log(i, " round completed");
 
 }
 
-if (humanScore > computerScore){
+if (humanScore > computerScore) {
     prompt("You deafeated computer!");
     console.log("You won this game after 5 round");
 } else {
@@ -108,5 +132,5 @@ if (humanScore > computerScore){
 
 
 
-
+*/
 
