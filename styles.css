@@ -20,7 +20,7 @@ body{
 
 .buttons{
     margin-top: 30px;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     padding: 1vh;
 
 /* 
@@ -45,7 +45,7 @@ body{
 }
 
 #result{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,39 +63,39 @@ body{
     margin-left: 1.5vw;
     font-weight: 400;
     font-size: 120%;
-    border: 2px dotted yellow;
+    /* border: 2px dotted yellow; */
 }
 
 
 #scores{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     flex-wrap: wrap;
     padding: 20px;
-    border: 2px solid pink;
+    /* border: 2px solid pink; */
     font-size: 20px;
     font-weight: 500;
     gap: 20px;
 }
 #score{
-    border: 2px dashed gray;
+    /* border: 2px dashed gray; */
     display: flex;
 }
 
 #comScrBtn,
 #humScrBtn{
     padding: 1px;
-
     height: 25px;
     width: 25px;
-    
-    border: 2px solid red;
+    background-color: rgb(162, 203, 144);
+    /* border: 2px solid red; */
+    border: 0px;
+    border-radius: 10%;
 }
 
 #infoAboutGame{
     display: flex;
-    justify-content: center;
+    justify-content: center;    
 }
 
 
